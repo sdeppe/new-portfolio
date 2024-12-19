@@ -10,10 +10,10 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(100); // Decrease the delta value for faster typing
   const [index, setIndex] = useState(1);
   const toRotate = [ "Software Engineer", "Web Developer" ];
-  const period = 2000;
+  const period = 2000; // Adjust the period value if needed
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -42,7 +42,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(200); // Decrease the delta value for faster typing
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
@@ -51,19 +51,14 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <div className="text-background">
                   <h1>{`Hi There, I'm`}<br />{`Shawn Deppe!`}<br /><span className="txt-rotate" dataPeriod="5000" data-rotate='[ "Software Engineer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Seeing how technology is used has always fasinated me and I hope to
-            use what I have learned to create new programs that will enrich
-            everyones daily lives in whichever way possible. Currently I have an
-            interest in application development, and backend web development.
-            However, I am hoping that with some more practice I will be able to
-            learn full stack development and dive deeper into machine learning.</p>
+                  <p>Seeing how technology is used has always fascinated me and I hope to use what I have learned to create new programs that will enrich everyone's daily lives in whichever way possible. Currently, I have an interest in application development, and backend web development. However, I am hoping that with some more practice I will be able to learn full stack development and dive deeper into machine learning.</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>
               </div>}
@@ -74,7 +69,7 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <div className="image-container">
-                    <img src={headerImg} alt="Header Img" className="rounded-image"/>
+                    <img src={headerImg} alt="Header Img" className="rounded-image" loading="lazy"/>
                   </div>
                 </div>
               }
