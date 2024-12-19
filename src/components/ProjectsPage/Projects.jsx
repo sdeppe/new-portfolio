@@ -12,36 +12,35 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "OCR-Based Grading Assistant",
+      description: "A scalable e-commerce solution with payment integration.",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "AquaLitical Visuals",
+      description: "Vue.js App that allows the user to correct guesses on fish species made by a machine learning algoritm",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Campus Buddy",
+      description: "A weather forecasting app using React and OpenWeather API.",
       imgUrl: projImg3,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Parsetagram",
+      description: "Android Instagram clone that uses a Parse database to manage user credentials and posts.",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Yard Sale App",
+      description: "Mock Android app that allows users to buy items from other users and post their own items to sell. Uses a parse database.",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Twitter Clone",
+      description: "iOS app that allows a user to log into Twitter and see their feed as well as post to it using Twitter API.",
       imgUrl: projImg3,
     },
-    
   ];
 
   return (
@@ -70,12 +69,6 @@ export const Projects = () => {
                           })
                         }
                       </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
