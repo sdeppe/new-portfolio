@@ -42,7 +42,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(200); // Decrease the delta value for faster typing
+      setDelta(100); // Decrease the delta value for faster typing
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
@@ -52,18 +52,6 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <div className="text-background">
-                  <h1>{`Hi There, I'm`}<br />{`Shawn Deppe!`}<br /><span className="txt-rotate" dataPeriod="5000" data-rotate='[ "Software Engineer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Seeing how technology is used has always fascinated me and I hope to use what I have learned to create new programs that will enrich everyone's daily lives in whichever way possible.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-                </div>
-              </div>}
-            </TrackVisibility>
-          </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
@@ -73,6 +61,18 @@ export const Banner = () => {
                   </div>
                 </div>
               }
+            </TrackVisibility>
+          </Col>
+          <Col xs={12} md={6} xl={7}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <div className="text-background">
+                    <h1>{`Hi There, I'm`}<br />{`Shawn Deppe!`}<br /><span className="txt-rotate" dataPeriod="5000" data-rotate='[ "Software Engineer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
+                    <p>Seeing how technology is used has always fascinated me and I hope to use what I have learned to create new programs that will enrich everyone's daily lives in whichever way possible.</p>
+                    <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  </div>
+                </div>}
             </TrackVisibility>
           </Col>
         </Row>
