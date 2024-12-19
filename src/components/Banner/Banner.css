@@ -1,0 +1,118 @@
+/************ Banner Css ************/
+.rounded-image {
+    border-radius: 50%;
+    width: 75%; /* Adjust the width as needed */
+    height: auto;
+  }
+  
+  .banner .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure the container takes the full height of the parent */
+  }
+  .banner {
+    margin-top: 0;
+    padding: 260px 0 100px 0;
+    background-image: url('../../assets/img/banner.jpeg');
+    background-position: center 35%; /* Adjust the vertical position */
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  @media (max-width: 768px) {
+    .banner {
+      padding: 100px 0 50px 0; /* Adjust padding for mobile devices */
+    }
+  }
+  .banner .tagline {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  .banner h1 {
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .banner p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+  }
+  .banner button {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 60px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+  }
+  .banner button svg {
+    font-size: 25px;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+    line-height: 1;
+  }
+  .banner button:hover svg {
+    margin-left: 25px;
+  }
+  .banner img {
+    animation: updown 3s linear infinite;
+  }
+  @keyframes updown {
+      0% {
+          transform: translateY(-20px);
+      }
+      50% {
+          transform: translateY(20px);
+      }
+      100% {
+          transform: translateY(-20px);
+      }
+  }
+  .txt-rotate > .wrap {
+    border-right: 0.08em solid #666;
+    color: red;
+  }
+  .text-background {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff; /* Ensure text is white for better contrast */
+  }
+  
+  .text-background .tagline,
+  .text-background h1,
+  .text-background p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .text-background {
+      background-color: rgba(0, 0, 0, 0.6); /* Slightly lighter background for mobile */
+    }
+    .txt-rotate > .wrap {
+      font-size: 0.75em; /* Adjust the font size as needed */
+    }
+    
+    
+    .banner .text-background {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
