@@ -58,7 +58,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <div className="text-background">
                   <h1>{`Hi There, I'm`}<br />{`Shawn Deppe!`}<br /><span className="txt-rotate" dataPeriod="5000" data-rotate='[ "Software Engineer", "Web Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Seeing how technology is used has always fascinated me and I hope to use what I have learned to create new programs that will enrich everyone's daily lives in whichever way possible. Currently, I have an interest in application development, and backend web development. However, I am hoping that with some more practice I will be able to learn full stack development and dive deeper into machine learning.</p>
+                  <p>Seeing how technology is used has always fascinated me and I hope to use what I have learned to create new programs that will enrich everyone's daily lives in whichever way possible.</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>
               </div>}
