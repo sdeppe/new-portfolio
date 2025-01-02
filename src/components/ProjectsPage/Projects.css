@@ -123,3 +123,18 @@
     right: 0;
     z-index: -4;
   }
+
+  .proj-imgbx img {
+    object-fit: contain; /* Ensures the full image fits inside the container */
+    width: 100%; /* Makes the image span the full width of the container */
+    height: 100%; /* Makes the image span the full height of the container */
+    background-color: #f4f4f4; /* Optional: Add a background color */
+  }
+  .proj-imgbx {
+    width: 300px; /* Set a fixed width for the project cards */
+    height: 200px; /* Set a fixed height for the project cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
