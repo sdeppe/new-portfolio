@@ -1,16 +1,14 @@
-import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { useState, useEffect } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
+import { BrowserRouter as Router } from 'react-router-dom';
 import navIcon1 from '../../assets/img/nav-icon1.svg';
 import navIcon2 from '../../assets/img/github.png';
-import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
 import './NavBar.css';
 
 export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState('home');
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
@@ -20,12 +18,12 @@ export const NavBar = () => {
       } else {
         setScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [])
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
@@ -51,8 +49,8 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIcon1} alt="" /></a>
-                <a href="#"><img src={navIcon2} alt="" /></a>
+                <a href="https://www.linkedin.com/in/shawn-deppe/" target="_blank" rel="noopener noreferrer"><img src={navIcon1} alt="LinkedIn" /></a>
+                <a href="https://github.com/sdeppe" target="_blank" rel="noopener noreferrer"><img src={navIcon2} alt="GitHub" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
